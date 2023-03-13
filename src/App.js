@@ -25,9 +25,26 @@ import React from 'react';
 // }
 
 // export default App;
+// This work 
+function Image() {
+    return <img src='https://content.codecademy.com/courses/React/react_photo-goose.jpg' 
+    onClick={makeDoggy}/>
+}
+
+function makeDoggy(e) {
+  // Call this extremely useful function on an <img>.
+  // The <img> will become a picture of a doggy.
+  e.target.setAttribute('src', 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg');
+  e.target.setAttribute('alt', 'doggy');
+  e.target.setAttribute('width', 1000);
+}
+
 function App() {
   return (
-    <p className='big'>Hello World!</p>
+    <div>
+      <Image />
+    </div>
+    
   );
 }
 
