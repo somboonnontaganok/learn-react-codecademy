@@ -34,7 +34,7 @@ function coinToss() {
 const pics = {
   kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
   doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg',
-  width: '1024' //1024 pixels
+  width: '100%' //fit to frame size
 };
 let img;
 
