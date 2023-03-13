@@ -26,30 +26,16 @@ import React from 'react';
 
 // export default App;
 // This work 
-function coinToss() {
-  // This function will randomly return either 'heads' or 'tails'.
-  return Math.floor(Math.random() * 2) ? 'heads' : 'tails';
-}
+const people = ['Rowe', 'Prevost', 'Gare'];
 
-const pics = {
-  kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
-  doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg',
-  width: '100%' //fit to frame size
-};
-let img;
-
-// if/else statement begins here:
-if (coinToss() === "heads") {
-  img = (<img src={pics.kitty} width={pics.width}/>);
-}
-else {
-  img = (<img src={pics.doggy} width={pics.width}/>);
-}
+const peopleLis = people.map((person, i) =>
+  // expression goes here:
+  <li key={'person_' + i}><h1>{person}</h1></li>);
 
 function App() {
   return (
     <div>
-      {img}
+      <ul>{peopleLis}</ul>
     </div>
     
   );
