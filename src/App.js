@@ -26,23 +26,30 @@ import React from 'react';
 
 // export default App;
 // This work 
-function Image() {
-    return <img src='https://content.codecademy.com/courses/React/react_photo-goose.jpg' 
-    onClick={makeDoggy}/>
+function coinToss() {
+  // This function will randomly return either 'heads' or 'tails'.
+  return Math.floor(Math.random() * 2) === 1 ? 'heads' : 'tails';
 }
 
-function makeDoggy(e) {
-  // Call this extremely useful function on an <img>.
-  // The <img> will become a picture of a doggy.
-  e.target.setAttribute('src', 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg');
-  e.target.setAttribute('alt', 'doggy');
-  e.target.setAttribute('width', 1000);
+const pics = {
+  kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg',
+  width: '1024' //1024 pixels
+};
+let img;
+
+// if/else statement begins here:
+if (coinToss() === "heads") {
+  img = (<img src={pics.kitty} width={pics.width}/>);
+}
+else {
+  img = (<img src={pics.doggy} width={pics.width}/>);
 }
 
 function App() {
   return (
     <div>
-      <Image />
+      {img}
     </div>
     
   );
