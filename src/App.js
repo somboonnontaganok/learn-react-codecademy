@@ -28,7 +28,7 @@ import React from 'react';
 // This work 
 function coinToss() {
   // This function will randomly return either 'heads' or 'tails'.
-  return Math.floor(Math.random() * 2) === 1 ? 'heads' : 'tails';
+  return Math.floor(Math.random() * 2) ? 'heads' : 'tails';
 }
 
 const pics = {
